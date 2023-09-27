@@ -1,8 +1,9 @@
+import Diena from './Diena';
 
-function App() {
+function App(props) {
   return (
     <>
-      
+      <Diena day = {props.num}></Diena>
     </>
   );
 }
