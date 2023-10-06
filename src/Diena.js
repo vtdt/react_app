@@ -1,15 +1,40 @@
-import Lessons from './Lessons';
+import Stunda from "./Stunda";
 
-function Diena(props){
-    return (
+function Diena(props) {
+  
+  const stunduSarakstsJSX = props.stundas.map((stunda) => {
+    return <Stunda name={stunda}/>
+  })
+
+  return (
     <>
-        <ol>
-            <Lessons lesson = {0}></Lessons>
-            <Lessons></Lessons>
-            <Lessons></Lessons>
-            <Lessons></Lessons>
-        </ol>
+      <p>Šodien ir {props.nosaukums}</p>
+      <ol>
+        {stunduSarakstsJSX}
+      </ol>
     </>
-    )
+  )
 }
+
 export default Diena;
+
+
+
+// Uztaisīt stundai komponenti
+
+// Lai ar props
+// tiek padots stundas nosaukums,
+
+
+// Vajadzīgas arī pirmdienas, otrdienas
+//stundas, bet jaunu komponeti netaisīsim.
+// Ko darīt?
+
+
+
+// .map() - iet cauri visiem masiva
+// elementiem, bet arī atgriež
+// to, ko prasa
+// .forEach() - iet cauri visiem
+// masiva elementiem, bet neko
+// neatgriež
